@@ -5,7 +5,6 @@
 ![Loc](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/HansBug/3e63a380eb43c56825d95931fd08ed61/raw/loc.json)
 ![Comments](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/HansBug/3e63a380eb43c56825d95931fd08ed61/raw/comments.json)
 
-[![Docs Deploy](https://github.com/potc-dev/potc-torch/workflows/Docs%20Deploy/badge.svg)](https://github.com/potc-dev/potc-torch/actions?query=workflow%3A%22Docs+Deploy%22)
 [![Code Test](https://github.com/potc-dev/potc-torch/workflows/Code%20Test/badge.svg)](https://github.com/potc-dev/potc-torch/actions?query=workflow%3A%22Code+Test%22)
 [![Badge Creation](https://github.com/potc-dev/potc-torch/workflows/Badge%20Creation/badge.svg)](https://github.com/potc-dev/potc-torch/actions?query=workflow%3A%22Badge+Creation%22)
 [![Package Release](https://github.com/potc-dev/potc-torch/workflows/Package%20Release/badge.svg)](https://github.com/potc-dev/potc-torch/actions?query=workflow%3A%22Package+Release%22)
