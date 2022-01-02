@@ -66,3 +66,12 @@ class TestPlugin(provement(BlankTranslator(__rules__))):
             assert obj.dtype == float_tensor.dtype
             assert torch.isclose(obj, float_tensor, rtol=1e-4, atol=1e-4).all()
             assert name == 'torch_tensor'
+
+    def test_torch_device(self):
+        with self.transobj_assert(torch.device('cpu')) as (obj, name):
+            assert obj == torch.device('cpu')
+            assert name == 'torch_device'
+
+        with self.transobj_assert(torch.device('cpu', 2)) as (obj, name):
+            assert obj == torch.device('cpu', 2)
+            assert name == 'torch_device'

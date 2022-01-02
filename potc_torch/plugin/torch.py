@@ -24,3 +24,12 @@ def torch_tensor(v: torch.Tensor, addon: Addons):
 @rule(type_=torch.Size)
 def torch_size(v: torch.Size, addon: Addons):
     return addon.obj(torch).Size(list(v))
+
+
+@rule(type_=torch.device)
+def torch_device(v: torch.device, addon: Addons):
+    device_func = addon.obj(torch).device
+    if v.index is not None:
+        return device_func(v.type, v.index)
+    else:
+        return device_func(v.type)
