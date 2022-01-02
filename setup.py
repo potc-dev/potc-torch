@@ -62,4 +62,9 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
+    entry_points={
+        'potc_plugin': [
+            'potc_torch=potc_torch.plugin:__rules__'
+        ]
+    },
 )
