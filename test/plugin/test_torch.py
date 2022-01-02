@@ -55,7 +55,7 @@ class TestPlugin(provement(BlankTranslator(__rules__))):
             assert name == 'torch_size'
 
     def test_torch_tensor(self):
-        int_tensor = torch.randint(-100, 300, (3, 4, 2), dtype=torch.float16)
+        int_tensor = torch.randint(-100, 300, (3, 4, 2), dtype=torch.int16)
         with self.transobj_assert(int_tensor) as (obj, name):
             assert obj.dtype == int_tensor.dtype
             assert (obj == int_tensor).all()
@@ -72,6 +72,6 @@ class TestPlugin(provement(BlankTranslator(__rules__))):
             assert obj == torch.device('cpu')
             assert name == 'torch_device'
 
-        with self.transobj_assert(torch.device('cpu', 2)) as (obj, name):
-            assert obj == torch.device('cpu', 2)
+        with self.transobj_assert(torch.device('cpu', 0)) as (obj, name):
+            assert obj == torch.device('cpu', 0)
             assert name == 'torch_device'
